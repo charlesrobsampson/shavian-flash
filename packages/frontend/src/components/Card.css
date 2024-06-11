@@ -1,0 +1,26 @@
+.card {
+    display: inline-flex;
+    border: solid 3px #ccc;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.front {
+    display: flex;
+    height: 100%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    /* display: flex; */
+    border-radius: 10px;
+    height: 100%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
