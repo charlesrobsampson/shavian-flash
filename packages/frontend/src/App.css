@@ -87,9 +87,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #6e6e6e;
-
 }
 
-.button:hover {
-  opacity: .5;
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    opacity: .5;
+  }
 }
