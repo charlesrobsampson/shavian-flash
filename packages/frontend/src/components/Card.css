@@ -9,7 +9,6 @@
 }
 
 .front {
-    display: flex;
     height: 100%;
     margin: 10px;
     justify-content: center;
@@ -17,7 +16,6 @@
 }
 
 .back {
-    /* display: flex; */
     border-radius: 10px;
     height: 100%;
     margin: 10px;

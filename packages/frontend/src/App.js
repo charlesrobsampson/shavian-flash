@@ -16,6 +16,8 @@ function App() {
   const [review, setReview] = useState({});
   const [drawList, setDrawList] = useState(createDrawList(LETTERS, review));
   const [currentCard, setCurrentCard] = useState(getRandomCard(drawList, LETTERS));
+  const [isFlipped, setIsFlipped] = useState(false);
+
   // console.log('state', {
   //   LETTERS,
   //   review,
@@ -31,7 +33,7 @@ function App() {
       }
     });
     const index = Math.floor(Math.random() * picked.length);
-    return <Card card={currentCard} test={picked[index]} />
+    return <Card card={currentCard} test={picked[index]} isFlipped={isFlipped} flipCard={setIsFlipped}/>
   }
   const updatePoints = (e) => {
     const { name, checked } = e.target;
@@ -77,6 +79,7 @@ function App() {
             const newDrawList = createDrawList(LETTERS, newReview);
             setDrawList(newDrawList);
             setCurrentCard(getRandomCard(newDrawList, LETTERS));
+            setIsFlipped(false);
           }}>
             Correct
           </div>
@@ -86,11 +89,13 @@ function App() {
             const newDrawList = createDrawList(LETTERS, newReview);
             setDrawList(newDrawList);
             setCurrentCard(getRandomCard(drawList, LETTERS));
+            setIsFlipped(false);
           }}>
             Incorrect
           </div>
           <div className='button new' onClick={e => {
             setCurrentCard(getRandomCard(drawList, LETTERS));
+            setIsFlipped(false);
           }}>
             New Card
           </div>
@@ -102,6 +107,7 @@ function App() {
           const newDrawList = createDrawList(LETTERS, {});
           setDrawList(newDrawList);
           setCurrentCard(getRandomCard(newDrawList, LETTERS));
+          setIsFlipped(false);
         }}>
           Reset
         </div>
