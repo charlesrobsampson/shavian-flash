@@ -4,7 +4,7 @@ import FlashCards from './components/FlashCards';
 import Alphabet from './components/Alphabet';
 
 function App() {
-  const [display, setDisplay] = useState('flash cards');
+  const [display, setDisplay] = useState('flashCards');
   const [toDisplay, setToDisplay] = useState('alphabet');
 
   const content = (display) => {
@@ -22,7 +22,7 @@ function App() {
       <div className='button new' onClick={e => {
         if (display === 'flashCards') {
           setDisplay('alphabet');
-          setToDisplay('flashCards');
+          setToDisplay('flash cards');
         } else {
           setDisplay('flashCards');
           setToDisplay('alphabet');
