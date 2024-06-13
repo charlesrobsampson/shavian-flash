@@ -23,9 +23,10 @@ export default function Card(props) {
     const keys = Object.keys(back);
     return (
       <div className='back'>
+        <h1>{props.card[front]}</h1>
         {
           keys.map(key => {
-            return <h1 key={key}>{`${key}: ${back[key]}`}</h1>;
+            return <h2 key={key}>{`${key}: ${back[key]}`}</h2>;
           })
         }
       </div>
