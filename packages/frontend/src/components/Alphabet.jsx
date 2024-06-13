@@ -1,6 +1,7 @@
 import { SHAVIAN_LETTERS } from '../shavian';
 import { buildMap } from './handleCards';
 import Card from './Card';
+import '../App.css';
 
 export default function FlashCards() {
     const LETTERS = buildMap(SHAVIAN_LETTERS);
@@ -8,7 +9,9 @@ export default function FlashCards() {
     console.log(LETTERS);
     return (
         <div className='alphabet'>
-            <h3>Alphabet</h3>
+            <header className="App-header">
+                <h3>alphabet</h3>
+            </header>
             {ls.map(l => {
                 console.log(LETTERS[l]);
                 return <Card card={LETTERS[l]} isFlipped={true} flipCard={() => { }} />
