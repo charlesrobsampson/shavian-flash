@@ -13,6 +13,11 @@
     margin: 10px;
     justify-content: center;
     align-items: center;
+
+    .prompt {
+        border-top: solid 1px #ccc;
+        border-bottom: solid 1px #ccc;
+    }
 }
 
 .back {

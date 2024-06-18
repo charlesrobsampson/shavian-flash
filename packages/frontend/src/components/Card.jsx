@@ -14,7 +14,7 @@ export default function Card(props) {
       <div className='front'>
         <h1>{front}</h1>
         <br></br>
-        <h1>{props.card[front]}</h1>
+        <h1 className='prompt'>{props.card[front]}</h1>
       </div>
     );
   };
